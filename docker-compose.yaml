@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  db:
+    container_name: client-service
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "123"
+    ports:
+      - "5433:5432"

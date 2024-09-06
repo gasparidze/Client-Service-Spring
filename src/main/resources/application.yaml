@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties.hibernate:
+      show_sql: true
+      format_sql: true
+    open-in-view: false
+
+  mvc:
+    format:
+      date: dd.MM.yyyy
+
+scheduler:
+  interval: 60000
+
+logging:
+  level:
+    org.springframework.orm.jpa: DEBUG
+    org.springframework.transaction: DEBUG
+
+jwt:
+  secret: e2x+p/2EwWrCQjYEMxzI7Ovgxm61O+Av6hMxcdiZOKQ=
+  lifetime: 180m
